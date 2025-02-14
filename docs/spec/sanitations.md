@@ -37,10 +37,15 @@ These changes are done in order to improve the overall usability, and as workaro
 
 - **Reason**: The date-time format is not compatible with the openAPI generation tool. Therefore, it is updated to datetime to make it compatible with the generation tool.
 
+4. **Add descriptions to undocumented records**  
+   - **Original**: `PublicTeam`, `PublicOwner`, `ForwardPaging`, `NextPage`, and `CollectionResponsePublicOwnerForwardPaging` did not contain any description fields.  
+   - **Updated**: Added concise `description` fields to each schema.  
+   - **Reason**: Improves clarity for developers using the generated Ballerina client by documenting what these objects represent and how they are used.
+
 ## OpenAPI cli command
 
 The following command was used to generate the Ballerina client from the OpenAPI specification. The command should be executed from the repository root directory.
 
 ```bash
-bal openapi -i docs/spec/openapi.json --mode client --license docs/license.txt -o ballerina --with-test
+bal openapi -i docs/spec/openapi.json --mode client --license docs/license.txt -o ballerina
 ```
