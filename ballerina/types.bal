@@ -26,16 +26,19 @@ public type GetCrmV3OwnersOwnerIdGetByIdQueries record {
     "id"|"userId" idProperty = "id";
 };
 
+# Details about forward pagination used to retrieve the next set of results in a paginated response.
 public type ForwardPaging record {
     NextPage next?;
 };
 
+# Represents a HubSpot team with a name, a unique identifier, and a flag indicating whether it is the primary team.
 public type PublicTeam record {
     string name;
     string id;
     boolean primary;
 };
 
+# Represents a HubSpot owner, which can be either an individual (PERSON) or a queue (QUEUE), along with their associated details.
 public type PublicOwner record {
     string firstName?;
     string lastName?;
@@ -80,11 +83,13 @@ public type ProxyConfig record {|
     string password = "";
 |};
 
+# Collection of owners with forward paging information for continued retrieval.
 public type CollectionResponsePublicOwnerForwardPaging record {
     ForwardPaging paging?;
     PublicOwner[] results;
 };
 
+# Information about the next page, including a link and the paging cursor token to retrieve more results.
 public type NextPage record {
     string link?;
     string after;
