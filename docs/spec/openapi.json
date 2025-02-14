@@ -200,6 +200,7 @@
         },
         "ForwardPaging" : {
           "type" : "object",
+          "description": "Details about forward pagination used to retrieve the next set of results in a paginated response.",
           "properties" : {
             "next" : {
               "$ref" : "#/components/schemas/NextPage"
@@ -209,6 +210,7 @@
         "PublicOwner" : {
           "required" : [ "archived", "createdAt", "id", "type", "updatedAt" ],
           "type" : "object",
+          "description": "Represents a HubSpot owner, which can be either an individual (PERSON) or a queue (QUEUE), along with their associated details.",
           "properties" : {
             "firstName" : {
               "type" : "string",
@@ -292,6 +294,7 @@
         "PublicTeam" : {
           "required" : [ "id", "name", "primary" ],
           "type" : "object",
+          "description": "Represents a HubSpot team with a name, a unique identifier, and a flag indicating whether it is the primary team.",
           "properties" : {
             "name" : {
               "type" : "string"
@@ -372,6 +375,7 @@
         "CollectionResponsePublicOwnerForwardPaging" : {
           "required" : [ "results" ],
           "type" : "object",
+          "description": "Collection of owners with forward paging information for continued retrieval.",
           "properties" : {
             "paging" : {
               "$ref" : "#/components/schemas/ForwardPaging"
@@ -387,6 +391,7 @@
         "NextPage" : {
           "required" : [ "after" ],
           "type" : "object",
+          "description": "Information about the next page, including a link and the paging cursor token to retrieve more results.",
           "properties" : {
             "link" : {
               "type" : "string"
