@@ -143,6 +143,7 @@
           {
             "name": "idProperty",
             "in": "query",
+            "description": "The property to search by. Defaults to `id`.",
             "required": false,
             "style": "form",
             "explode": true,
@@ -250,6 +251,7 @@
         "description": "Details about forward pagination used to retrieve the next set of results in a paginated response.",
         "properties": {
           "next": {
+            "description": "Information about the next page, including a link and the paging cursor token to retrieve more results.",
             "$ref": "#/components/schemas/NextPage"
           }
         }
@@ -267,23 +269,28 @@
         "properties": {
           "firstName": {
             "type": "string",
+            "description": "The first name of the owner",
             "example": "John"
           },
           "lastName": {
             "type": "string",
+            "description": "The last name of the owner",
             "example": "Smith"
           },
           "createdAt": {
             "type": "string",
+            "description": "The date and time the owner was created",
             "format": "datetime",
             "example": "2019-10-30T03:30:17.883+00:00"
           },
           "archived": {
             "type": "boolean",
+            "description": "Whether the owner has been archived",
             "example": false
           },
           "teams": {
             "type": "array",
+            "description": "The teams that the owner is a member of",
             "example": [
               {
                 "id": "178588",
@@ -302,14 +309,17 @@
           },
           "id": {
             "type": "string",
+            "description": "The unique identifier for the owner",
             "example": "6166860"
           },
           "userIdIncludingInactive": {
             "type": "integer",
+            "description": "The unique identifier for the owner, including inactive owners",
             "format": "int32"
           },
           "type": {
             "type": "string",
+            "description": "The type of owner",
             "enum": [
               "PERSON",
               "QUEUE"
@@ -317,15 +327,18 @@
           },
           "userId": {
             "type": "integer",
+            "description": "The unique identifier for the owner",
             "format": "int32",
             "example": 1296619
           },
           "email": {
             "type": "string",
+            "description": "The email address of the owner",
             "example": "jsmith@example.com"
           },
           "updatedAt": {
             "type": "string",
+            "description": "The date and time the owner was last updated",
             "format": "datetime",
             "example": "2019-12-07T16:50:06.678+00:00"
           }
@@ -363,13 +376,16 @@
         "description": "Represents a HubSpot team with a name, a unique identifier, and a flag indicating whether it is the primary team.",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The name of the team"
           },
           "id": {
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier for the team"
           },
           "primary": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the team is the primary team"
           }
         }
       },
@@ -455,10 +471,12 @@
         "description": "Collection of owners with forward paging information for continued retrieval.",
         "properties": {
           "paging": {
-            "$ref": "#/components/schemas/ForwardPaging"
+            "$ref": "#/components/schemas/ForwardPaging",
+            "description": "Details about forward pagination used to retrieve the next set of results in a paginated response."
           },
           "results": {
             "type": "array",
+            "description": "A list of owners",
             "items": {
               "$ref": "#/components/schemas/PublicOwner"
             }
@@ -473,10 +491,12 @@
         "description": "Information about the next page, including a link and the paging cursor token to retrieve more results.",
         "properties": {
           "link": {
-            "type": "string"
+            "type": "string",
+            "description": "A link to the next page of results"
           },
           "after": {
-            "type": "string"
+            "type": "string",
+            "description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results."
           }
         }
       }
@@ -509,11 +529,13 @@
       "private_apps_legacy": {
         "type": "apiKey",
         "name": "private-app-legacy",
+        "description": "Used to authenticate requests from legacy private apps",
         "in": "header"
       },
       "private_apps": {
         "type": "apiKey",
         "name": "private-app",
+        "description": "Used to authenticate requests from private apps",
         "in": "header"
       }
     }
