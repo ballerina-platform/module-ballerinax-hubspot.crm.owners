@@ -23,6 +23,7 @@ import ballerina/http;
 public type GetCrmV3OwnersOwnerIdGetByIdQueries record {
     # Whether to return only results that have been archived.
     boolean archived = false;
+    # The property to search by. Defaults to `id`.
     "id"|"userId" idProperty = "id";
 };
 
@@ -33,23 +34,37 @@ public type ForwardPaging record {
 
 # Represents a HubSpot team with a name, a unique identifier, and a flag indicating whether it is the primary team.
 public type PublicTeam record {
+    # The name of the team
     string name;
+    # The unique identifier for the team
     string id;
+    # Whether the team is the primary team
     boolean primary;
 };
 
 # Represents a HubSpot owner, which can be either an individual (PERSON) or a queue (QUEUE), along with their associated details.
 public type PublicOwner record {
+    # The first name of the owner
     string firstName?;
+    # The last name of the owner
     string lastName?;
+    # The date and time the owner was created
     string createdAt;
+    # Whether the owner has been archived
     boolean archived;
+    # The teams that the owner is a member of
     PublicTeam[] teams?;
+    # The unique identifier for the owner
     string id;
+    # The unique identifier for the owner, including inactive owners
     int:Signed32 userIdIncludingInactive?;
+    # The type of owner
     "PERSON"|"QUEUE" 'type;
+    # The unique identifier for the owner
     int:Signed32 userId?;
+    # The email address of the owner
     string email?;
+    # The date and time the owner was last updated
     string updatedAt;
 };
 
@@ -86,18 +101,25 @@ public type ProxyConfig record {|
 # Collection of owners with forward paging information for continued retrieval.
 public type CollectionResponsePublicOwnerForwardPaging record {
     ForwardPaging paging?;
+    # A list of owners
     PublicOwner[] results;
 };
 
 # Information about the next page, including a link and the paging cursor token to retrieve more results.
 public type NextPage record {
+    # A link to the next page of results
     string link?;
+    # The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
     string after;
 };
 
 # Provides API key configurations needed when communicating with a remote HTTP endpoint.
 public type ApiKeysConfig record {|
+    # Used to authenticate requests from legacy private apps
+    @display {label: "", kind: "password"}
     string private\-app\-legacy;
+    # Used to authenticate requests from private apps
+    @display {label: "", kind: "password"}
     string private\-app;
 |};
 
