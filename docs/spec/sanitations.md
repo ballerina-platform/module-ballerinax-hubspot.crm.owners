@@ -28,9 +28,10 @@ These changes are done in order to improve the overall usability, and as workaro
 - **Reason**: The date-time format is not compatible with the openAPI generation tool. Therefore, it is updated to datetime to make it compatible with the generation tool.
 
 4. **Add descriptions to undocumented records and properties**
-   - **Original**: `PublicTeam`, `PublicOwner`, `ForwardPaging`, `NextPage`, `CollectionResponsePublicOwnerForwardPaging` and their properties did not contain any description fields.
-   - **Updated**: Added concise `description` fields to each schema and its properties.
-   - **Reason**: Improves clarity for developers using the generated Ballerina client by documenting what these objects represent and how they are used.
+
+- **Original**: `PublicTeam`, `PublicOwner`, `ForwardPaging`, `NextPage`, `CollectionResponsePublicOwnerForwardPaging` and their properties did not contain any description fields.
+- **Updated**: Added concise `description` fields to each schema and its properties.
+- **Reason**: Improves clarity for developers using the generated Ballerina client by documenting what these objects represent and how they are used.
 
 ## OpenAPI cli command
 
