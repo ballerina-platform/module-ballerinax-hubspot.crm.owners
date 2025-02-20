@@ -158,7 +158,7 @@ import ballerina/oauth2;
         }
     };
 
-    final hsowners:Client hubspotClient = check new (config);
+    final hsowners:Client hubspot = check new (config);
     ```
 
 ### Step 3: Invoke the connector operation
@@ -169,7 +169,7 @@ Now, utilize the available connector operations. A sample usecase is shown below
 
 ```ballerina
 public function main() returns error? {
-   hsowners:CollectionResponsePublicOwnerForwardPaging getPageOfOwners = check hubspotClient->/('limit = 10);
+   hsowners:CollectionResponsePublicOwnerForwardPaging getPageOfOwners = check hubspot->/('limit = 10);
    io:println("Owners: ", getPageOfOwners);
 }
 ```
