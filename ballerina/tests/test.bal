@@ -23,7 +23,7 @@ configurable string clientSecret = ?;
 configurable string refreshToken = ?;
 final string serviceUrl = isLiveServer ? "https://api.hubapi.com/crm/v3/owners" : "http://localhost:9091";
 
-final Client hubspotClient = check initClient();
+final Client hubspot = check initClient();
 
 final int:Signed32 testOwnerId = 77288308;
 final string testOwnerEmail = "kalhara.wso2.dev@gmail.com";
@@ -48,14 +48,14 @@ isolated function initClient() returns Client|error {
 // Test: Get all owners
 @test:Config {groups: ["live_tests", "mock_tests"]}
 isolated function testGetAllOwners() returns error? {
-    CollectionResponsePublicOwnerForwardPaging response = check hubspotClient->/.get();
+    CollectionResponsePublicOwnerForwardPaging response = check hubspot->/.get();
     test:assertTrue(response.results.length() > 0, msg = "Expected non-empty list");
 }
 
 // Test: Get owner by ID
 @test:Config {groups: ["live_tests", "mock_tests"]}
 isolated function testGetOwnerById() returns error? {
-    PublicOwner response = check hubspotClient->/[testOwnerId]();
+    PublicOwner response = check hubspot->/[testOwnerId]();
     test:assertEquals(response.id, testOwnerId.toString(), msg = "ID mismatch");
     test:assertEquals(response.email, testOwnerEmail, msg = "Email mismatch");
 }
@@ -63,6 +63,6 @@ isolated function testGetOwnerById() returns error? {
 // Negative test: Get owner by ID with invalid ID
 @test:Config {groups: ["live_tests", "mock_tests"]}
 isolated function testGetOwnerByInvalidId() {
-    PublicOwner|error? response = hubspotClient->/[testInvalidOwnerId]();
+    PublicOwner|error response = hubspot->/[testInvalidOwnerId]();
     test:assertTrue(response is error, msg = "Expected an error");
 }
