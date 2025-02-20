@@ -32,11 +32,11 @@ hsowners:OAuth2RefreshTokenGrantConfig auth = {
 };
 
 // Create a new HubSpot owners client using the OAuth config.
-final hsowners:Client hubspotClient = check new ({ auth });
+final hsowners:Client hubspot = check new ({ auth });
 
 public function main() returns error? {
     // Retrieve all owners from HubSpot.
-    hsowners:CollectionResponsePublicOwnerForwardPaging response = check hubspotClient->/();
+    hsowners:CollectionResponsePublicOwnerForwardPaging response = check hubspot->/();
 
     // Print the details of each owner.
     foreach var owner in response.results {
