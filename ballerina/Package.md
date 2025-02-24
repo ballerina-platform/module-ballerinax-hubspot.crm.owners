@@ -8,13 +8,13 @@ The `ballerinax/hubspot.crm.owners` offers APIs to connect and interact with the
 
 To use the HubSpot CRM Owners connector, you must have access to the HubSpot API through a HubSpot developer account and a HubSpot App under it. Therefore you need to register for a developer account at HubSpot if you don't have one already.
 
-### Step 1: Create/Login to a HubSpot Developer Account
-
-If you have an account already, go to the [HubSpot developer portal](https://app.hubspot.com/)
+### Step 1: Create/Login to a HubSpot developer account
 
 If you don't have a HubSpot Developer Account you can sign up to a free account [here](https://developers.hubspot.com/get-started)
 
-### Step 2 (Optional): Create a Developer Test Account
+If you have an account already, go to the [HubSpot developer portal](https://app.hubspot.com/)
+
+### Step 2: Create a developer test account (Optional)
 
 Within app developer accounts, you can create a [developer test account](https://developers.hubspot.com/beta-docs/getting-started/account-types#developer-test-accounts) under your account to test apps and integrations without affecting any real HubSpot data.
 
@@ -31,7 +31,7 @@ Within app developer accounts, you can create a [developer test account](https:/
    You will see the newly created test account in the list of test accounts.
    ![Test account portal](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/test-account-portal.png)
 
-### Step 3: Create a HubSpot App
+### Step 3: Create a HubSpot app
 
 1. Now navigate to the `Apps` section from the left sidebar and click on the `Create app` button on the top right corner.
    ![Create app](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/create-app.png)
@@ -39,7 +39,7 @@ Within app developer accounts, you can create a [developer test account](https:/
 2. Provide a public app name and description for your app.
    ![App name and description](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/app-name-desc.png)
 
-### Step 4: Setup Authentication
+### Step 4: Setup authentication
 
 1. Move to the `Auth` tab.
    ![Configure authentication](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/config-auth.png)
@@ -53,12 +53,12 @@ Within app developer accounts, you can create a [developer test account](https:/
 
    ![Redirect URL](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/redirect-url.png)
 
-### Step 5: Get the Client ID and Client Secret
+### Step 5: Get the client id and client secret
 
 Navigate to the `Auth` tab and you will see the `Client ID` and `Client Secret` for your app. Make sure to save these values.
 ![Client ID and Client Secret](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/main/docs/resources/client-id-secret.png)
 
-### Step 6: Setup Authentication Flow
+### Step 6: Setup authentication flow
 
 Before proceeding with the Quickstart, ensure you have obtained the Access Token or Refresh Token using the following steps:
 
@@ -157,7 +157,7 @@ import ballerina/oauth2;
 
 Now, utilize the available connector operations. A sample usecase is shown below.
 
-#### View Owners
+#### View owners
 
 ```ballerina
 public function main() returns error? {
@@ -166,7 +166,7 @@ public function main() returns error? {
 }
 ```
 
-## Examples - (Not COMPLETED YET)
+## Examples
 
 The `HubSpot CRM Owners` connector provides practical examples illustrating usage in various scenarios.
 
