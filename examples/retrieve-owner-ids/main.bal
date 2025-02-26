@@ -39,7 +39,7 @@ public function main() returns error? {
     hsowners:CollectionResponsePublicOwnerForwardPaging response = check hubspot->/();
 
     // Print the details of each owner.
-    foreach var owner in response.results {
+    foreach hsowners:PublicOwner owner in response.results {
         io:println("Owner -> ", owner.email, " (ID: ", owner.id, ")");
         io:println("   First Name       : ", owner.firstName);
         io:println("   Last Name        : ", owner.lastName);
