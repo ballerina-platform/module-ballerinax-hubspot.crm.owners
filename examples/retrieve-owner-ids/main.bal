@@ -49,6 +49,4 @@ public function main() returns error? {
         io:println("   Archived         : ", owner.archived);
         io:println();
     }
-
-    return ();
 }
