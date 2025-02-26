@@ -19,9 +19,9 @@ import ballerina/oauth2;
 import ballerinax/hubspot.crm.owners as hsowners;
 
 // These values are configured externally (e.g., via Ballerina.toml).
-configurable string clientId = "client-id";
-configurable string clientSecret = "client-secret";
-configurable string refreshToken = "refresh-token";
+configurable string clientId = ?;
+configurable string clientSecret = ?;
+configurable string refreshToken = ?;
 
 // Configure OAuth 2.0 refresh token grant details to connect to HubSpot.
 hsowners:OAuth2RefreshTokenGrantConfig auth = {
