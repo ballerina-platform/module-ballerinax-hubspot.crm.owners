@@ -17,10 +17,10 @@
 import ballerina/oauth2;
 import ballerina/test;
 
-configurable boolean isLiveServer = ?;
-configurable string clientId = ?;
-configurable string clientSecret = ?;
-configurable string refreshToken = ?;
+configurable boolean isLiveServer = false;
+configurable string clientId = "client-id";
+configurable string clientSecret = "client-secret";
+configurable string refreshToken = "refresh-token";
 final string serviceUrl = isLiveServer ? "https://api.hubapi.com/crm/v3/owners" : "http://localhost:9091";
 
 final Client hubspotClient = check initClient();
