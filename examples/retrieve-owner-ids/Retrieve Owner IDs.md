@@ -1,6 +1,6 @@
-# [Retrieve the owner IDs for all users in the account to later assign CRM records across the team.](https://github.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/tree/main/examples/retrieve-owner-ids)
+# Retrieve the owner IDs for all users in the account to later assign CRM records across the team
 
-This example demonstrates how to use the HubSpot CRM Owners connector to retrieve a page of owners from your HubSpot account. It shows how to fetch owner details—such as owner ID, first name, and last name—which can then be used to assign CRM records to team members.
+This example demonstrates how to use the HubSpot CRM Owners connector to retrieve a page of owners from your HubSpot account. It shows how to fetch owner details such as owner ID, first name, and last name, which can then be used to assign CRM records to team members.
 
 ## Prerequisites
 

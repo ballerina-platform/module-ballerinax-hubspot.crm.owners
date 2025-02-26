@@ -1,5 +1,5 @@
 [package]
-org = "kalhara_ja"
+org = "wso2"
 name = "retrieve_owner_ids"
 version = "0.1.0"
 distribution = "2201.11.0"

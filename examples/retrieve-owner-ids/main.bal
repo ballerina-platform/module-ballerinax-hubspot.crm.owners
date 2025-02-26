@@ -25,14 +25,14 @@ configurable string refreshToken = ?;
 
 // Configure OAuth 2.0 refresh token grant details to connect to HubSpot.
 hsowners:OAuth2RefreshTokenGrantConfig auth = {
-    clientId: clientId,
-    clientSecret: clientSecret,
-    refreshToken: refreshToken,
+    clientId,
+    clientSecret,
+    refreshToken,
     credentialBearer: oauth2:POST_BODY_BEARER
 };
 
 // Create a new HubSpot owners client using the OAuth config.
-final hsowners:Client hubspot = check new ({ auth });
+final hsowners:Client hubspot = check new ({auth});
 
 public function main() returns error? {
     // Retrieve all owners from HubSpot.
