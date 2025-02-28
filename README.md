@@ -128,8 +128,8 @@ To use the `Hubspot CRM Owners` connector in your Ballerina application, update 
 Import the `hubspot.crm.owners` module and `oauth2` module.
 
 ```ballerina
-import ballerinax/hubspot.crm.owners as hsowners;
 import ballerina/oauth2;
+import ballerinax/hubspot.crm.owners as hsowners;
 ```
 
 ### Step 2: Instantiate a new connector
