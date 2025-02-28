@@ -29,18 +29,18 @@ service on new http:Listener(9091) {
     # http:DefaultStatusCodeResponse (An error occurred.)
     resource function get .(string? email, string? after, int:Signed32 'limit = 100, boolean archived = false) returns CollectionResponsePublicOwnerForwardPaging|error {
         return {
-            "results": [
+            results: [
                 {
-                    "id": "77288308",
-                    "email": "kalhara.wso2.dev@gmail.com",
-                    "type": "PERSON",
-                    "firstName": "string",
-                    "lastName": "string",
-                    "userId": 77288308,
-                    "userIdIncludingInactive": 77288308,
-                    "createdAt": "2025-02-11T09:41:26.664Z",
-                    "updatedAt": "2025-02-11T09:41:26.664Z",
-                    "archived": false
+                    id: "77288308",
+                    email: "kalhara.wso2.dev@gmail.com",
+                    'type: "PERSON",
+                    firstName: "string",
+                    lastName: "string",
+                    userId: 77288308,
+                    userIdIncludingInactive: 77288308,
+                    createdAt: "2025-02-11T09:41:26.664Z",
+                    updatedAt: "2025-02-11T09:41:26.664Z",
+                    archived: false
                 }
             ]
         };
@@ -56,16 +56,16 @@ service on new http:Listener(9091) {
     resource function get [int:Signed32 ownerId]("id"|"userId" idProperty = "id", boolean archived = false) returns PublicOwner|error {
         if ownerId == 77288308 {
             return {
-                "id": "77288308",
-                "email": "kalhara.wso2.dev@gmail.com",
-                "type": "PERSON",
-                "firstName": "string",
-                "lastName": "string",
-                "userId": 77288308,
-                "userIdIncludingInactive": 77288308,
-                "createdAt": "2025-02-11T09:41:26.664Z",
-                "updatedAt": "2025-02-11T09:41:26.664Z",
-                "archived": false
+                id: "77288308",
+                email: "kalhara.wso2.dev@gmail.com",
+                'type: "PERSON",
+                firstName: "string",
+                lastName: "string",
+                userId: 77288308,
+                userIdIncludingInactive: 77288308,
+                createdAt: "2025-02-11T09:41:26.664Z",
+                updatedAt: "2025-02-11T09:41:26.664Z",
+                archived: false
             };
         } else {
             return error("Owner not found");
