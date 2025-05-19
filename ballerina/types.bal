@@ -21,6 +21,7 @@ import ballerina/http;
 
 # Details about forward pagination used to retrieve the next set of results in a paginated response
 public type ForwardPaging record {
+    # Information about the next page, including a link and the paging cursor token to retrieve more results
     NextPage next?;
 };
 
@@ -77,6 +78,7 @@ public type OAuth2RefreshTokenGrantConfig record {|
 
 # Collection of owners with forward paging information for continued retrieval
 public type CollectionResponsePublicOwnerForwardPaging record {
+    # Details about forward pagination used to retrieve the next set of results in a paginated response
     ForwardPaging paging?;
     # A list of owners
     PublicOwner[] results;
