@@ -5,7 +5,7 @@ name = "hubspot.crm.owners"
 version = "@toml.version@"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = ["hubspot", "crm", "owners", "integration"]
+keywords = ["owners", "integration", "Vendor/HubSpot", "Area/CRM", "Type/Connector"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-hubspot.crm.owners"
 
 [build-options]
