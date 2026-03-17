@@ -2,7 +2,14 @@
 
 [HubSpot](https://developers.hubspot.com) is an AI-powered customer relationship management (CRM) platform.
 
-The `ballerinax/hubspot.crm.owners` offers APIs to connect and interact with the [HubSpot CRM Owners API](https://developers.hubspot.com/docs/reference/api/crm/owners) endpoints, specifically based on the [HubSpot REST API](https://developers.hubspot.com/docs/reference/api).
+The HubSpot connector offers APIs to connect and interact with the [HubSpot CRM Owners API](https://developers.hubspot.com/docs/reference/api/crm/owners) endpoints, specifically based on the [HubSpot REST API](https://developers.hubspot.com/docs/reference/api).
+
+### Key Features
+
+- Retrieve and list CRM record owners
+- Look up owners by ID or email address
+- Access owner team and role information
+- Support for pagination when listing owners
 
 ## Setup guide
 
