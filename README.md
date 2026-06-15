@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/actions/workflows/ci.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/actions/workflows/ci.yml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-hubspot.crm.owners.svg)](https://github.com/ballerina-platform/module-ballerinax-hubspot.crm.owners/commits/master)
-[![GitHub Issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-library/module/hubspot.crm.owners.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-library/labels/module%hubspot.crm.owners)
+[![GitHub Issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-library/module/hubspot.crm.owners.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-library/labels/module%2Fhubspot.crm.owners)
 
 ## Overview
 
@@ -119,7 +119,7 @@ Before proceeding with the Quickstart, ensure you have obtained the Access Token
 
 ## Quickstart
 
-To use the `Hubspot CRM Owners` connector in your Ballerina application, update the `.bal` file as follows:
+To use the `HubSpot CRM Owners` connector in your Ballerina application, update the `.bal` file as follows:
 
 ### Step 1: Import the module
 
