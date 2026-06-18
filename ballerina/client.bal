@@ -58,8 +58,9 @@ public isolated client class Client {
         return self.clientEp->get(resourcePath, httpHeaders);
     }
 
-    # Read an owner by given `id` or `userId`
+    # Read owner by ID or userId
     #
+    # + ownerId - The unique integer ID of the owner to retrieve.
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - successful operation 
