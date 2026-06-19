@@ -92,7 +92,7 @@ public type NextPage record {
     string after;
 };
 
-# Provides API key configurations needed when communicating with a remote HTTP endpoint.
+# Provides API key configurations needed when communicating with a remote HTTP endpoint
 public type ApiKeysConfig record {|
     # Used to authenticate requests from legacy private apps
     @display {label: "", kind: "password"}
@@ -114,10 +114,10 @@ public type GetCrmV3OwnersGetPageQueries record {
     string email?;
 };
 
-# Provides a set of configurations for controlling the behaviours when communicating with a remote HTTP endpoint.
+# Provides a set of configurations for controlling the behaviours when communicating with a remote HTTP endpoint
 @display {label: "Connection Config"}
 public type ConnectionConfig record {|
-    # Provides Auth configurations needed when communicating with a remote HTTP endpoint.
+    # Provides Auth configurations needed when communicating with a remote HTTP endpoint
     http:BearerTokenConfig|OAuth2RefreshTokenGrantConfig|ApiKeysConfig auth;
     # The HTTP version understood by the client
     http:HttpVersion httpVersion = http:HTTP_2_0;
@@ -154,6 +154,6 @@ public type ConnectionConfig record {|
     # Enables the inbound payload validation functionality which provided by the constraint package. Enabled by default
     boolean validation = true;
     # Enables relaxed data binding on the client side. When enabled, `nil` values are treated as optional, 
-    # and absent fields are handled as `nilable` types. Enabled by default.
+    # and absent fields are handled as `nilable` types. Enabled by default
     boolean laxDataBinding = true;
 |};
